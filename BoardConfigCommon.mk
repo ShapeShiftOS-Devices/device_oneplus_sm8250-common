@@ -58,7 +58,6 @@ TARGET_KERNEL_CONFIG := neutrino_defconfig
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
 TARGET_BOARD_PLATFORM := kona
-TARGET_BOARD_PLATFORM_GPU := qcom-adreno650
 
 # Properties
 TARGET_ODM_PROP += $(COMMON_PATH)/odm.prop
