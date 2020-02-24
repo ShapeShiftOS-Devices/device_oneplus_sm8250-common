@@ -80,6 +80,7 @@
                     android:name="android.service.quicksettings.action.QS_TILE"/>
             </intent-filter>
         </service>
+
         <service
             android:name="org.aosp.device.DeviceSettings.HBMModeTileService"
             android:icon="@drawable/ic_hbm_tile"
@@ -95,6 +96,17 @@
             android:name="org.aosp.device.DeviceSettings.DCModeTileService"
             android:icon="@drawable/ic_dimming_off"
             android:label="@string/tile_dc_mode"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action
+                    android:name="android.service.quicksettings.action.QS_TILE"/>
+            </intent-filter>
+        </service>
+
+        <service
+            android:name="org.aosp.device.DeviceSettings.LogTile"
+            android:icon="@drawable/ic_qs_log"
+            android:label="@string/quick_settings_log_tile_label"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
             <intent-filter>
                 <action
