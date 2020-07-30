@@ -42,10 +42,12 @@ product/lib64/libdpmtcm.so
 -priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON.apk
 
 # IMS
--product/priv-app/ims/ims.apk|df0b116bec248f6d7402abe3c10379fe7b62759f
+product/lib/libimscamera_jni.so|a3cadab69dbc525a2cfdd596e222c943d2954ec7
+product/lib/libimsmedia_jni.so|b8fed695bb647e6878fdc1bcc6640215db8300ba
+-product/priv-app/ims/ims.apk|7aff4613e75dfe90363409cf649e2a3e09469921
 product/lib64/libdiag_system.so
-product/lib64/libimscamera_jni.so
-product/lib64/libimsmedia_jni.so
+product/lib64/libimscamera_jni.so|534357d7956ff4bf429e9f7ba13b8b957377af40
+product/lib64/libimsmedia_jni.so|de1fa38d7030c4f9f79a3756281000d8bddea320
 product/lib64/lib-imsvideocodec.so
 product/lib64/lib-imsvtextutils.so
 product/lib64/lib-imsvt.so
@@ -73,15 +75,15 @@ etc/permissions/qti_libpermissions.xml
 etc/permissions/qti_permissions.xml
 etc/sysconfig/qti_whitelist.xml
 -framework/qcnvitems.jar
--product/app/QtiTelephonyService/QtiTelephonyService.apk
+-product/app/QtiTelephonyService/QtiTelephonyService.apk|9233f71f7bf7071e2ed53dc5383b06c175ade1bf
 product/etc/permissions/qcrilhook.xml
 product/etc/permissions/telephonyservice.xml
 product/framework/qcrilhook.jar
-product/framework/QtiTelephonyServicelibrary.jar
+product/framework/QtiTelephonyServicelibrary.jar|ee040ed40595a0c5871780b1d5be753954ae523d
 -product/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 
-# Telephony (qti-telephony-common) - from DRG - QKQ1.190828.002
-product/framework/qti-telephony-common.jar|b4d187700f279cdbd40e74b4c3be4504f10d8b29
+# Telephony (qti-telephony-common)
+product/framework/qti-telephony-common.jar|9d222cee91aceb02f2bcc101bb77fc2328b3755f
 
 # WiFi Display
 bin/wfdservice
