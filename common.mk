@@ -415,7 +415,8 @@ PRODUCT_PACKAGES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
-    device/oneplus/common
+    device/oneplus/common \
+    vendor/qcom/opensource/commonsys/packages/apps/Bluetooth
 
 # Sounds
 PRODUCT_PRODUCT_PROPERTIES += \
