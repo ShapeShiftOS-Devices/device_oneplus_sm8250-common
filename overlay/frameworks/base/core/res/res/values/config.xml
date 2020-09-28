@@ -416,4 +416,7 @@
         <item>com.android.location.fused</item>
         <item>com.google.android.gms</item>
     </string-array>
+
+    <!-- Enable the RingtonePickerActivity in 'com.android.providers.media'. -->
+    <bool name="config_defaultRingtonePickerEnabled">true</bool>
 </resources>
