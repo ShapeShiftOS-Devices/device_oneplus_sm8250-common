@@ -419,4 +419,10 @@
 
     <!-- Enable the RingtonePickerActivity in 'com.android.providers.media'. -->
     <bool name="config_defaultRingtonePickerEnabled">true</bool>
+
+    <!-- Screen off FOD -->
+    <bool name="config_supportScreenOffFod">true</bool>
+
+    <!-- Whether device supports in-display fingerprint when screen is turned off -->
+    <bool name="config_supportsInDisplayFingerprintGesture">true</bool>
 </resources>
