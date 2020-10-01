@@ -44,7 +44,8 @@ PRODUCT_TARGET_VNDK_VERSION := 29
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.ims.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.telephony.ims.xml \
-    frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/handheld_core_hardware.xml
+    frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/handheld_core_hardware.xml \
+    device/oneplus/sm8250-common/configs/vendor.lineage.biometrics.fingerprint.inscreen.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml
 
 # A/B
 AB_OTA_UPDATER := true
@@ -129,6 +130,10 @@ PRODUCT_PACKAGES += \
     lineage.biometrics.fingerprint.inscreen@1.0-service.oneplus_kona \
     vendor.oneplus.fingerprint.extension@1.0 \
     vendor.oneplus.hardware.display@1.0
+
+# FOD
+TARGET_HAS_FOD := true
+EXTRA_FOD_ANIMATIONS := true
 
 # HotwordEnrollement app permissions
 PRODUCT_COPY_FILES += \
