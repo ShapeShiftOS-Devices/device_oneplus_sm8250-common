@@ -1,0 +1,2 @@
+# allow platform_app to interact with sysfs_battery_supply
+r_dir_file(platform_app, sysfs_battery_supply)
