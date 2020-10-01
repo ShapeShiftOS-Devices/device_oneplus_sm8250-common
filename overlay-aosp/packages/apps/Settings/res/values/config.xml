@@ -29,4 +29,7 @@
          4 = FOD
     -->
     <integer name="config_fingerprintSensorLocation">4</integer>
+
+    <!-- Smart Charging -->
+    <bool name="config_supportSmartCharging">true</bool>
 </resources>
