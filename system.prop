@@ -13,7 +13,7 @@ persist.vendor.bt.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac
 
 # Camera
 camera.disable_zsl_mode=true
-vendor.camera.aux.packagelist=com.android.camera
+vendor.camera.aux.packagelist=com.android.camera,org.codeaurora.snapcam,org.lineageos.snap,com.google.android.GoogleCamera
 
 # Charger
 ro.charger.disable_init_blank=true
