@@ -118,4 +118,6 @@
     <!-- Whether device has warp charging support -->
     <bool name="config_hasWarpCharger">true</bool>
 
+    <!-- Default state for LiveDisplay -->
+    <bool name="config_liveDisplayAvailable">true</bool>
 </resources>
