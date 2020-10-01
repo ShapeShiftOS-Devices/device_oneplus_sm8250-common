@@ -137,6 +137,7 @@ BOARD_FLASH_BLOCK_SIZE := 262144 # (BOARD_KERNEL_PAGESIZE * 64)
 TARGET_COPY_OUT_ODM := odm
 TARGET_COPY_OUT_PRODUCT := product
 TARGET_COPY_OUT_VENDOR := vendor
+TARGET_USES_PREBUILT_DYNAMIC_PARTITIONS := true
 
 # tell update_engine to not change dynamic partition table during updates
 # needed since our qti_dynamic_partitions does not include
