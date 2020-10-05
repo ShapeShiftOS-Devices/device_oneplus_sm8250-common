@@ -17,6 +17,7 @@
 # Custom specific stuff
 CUSTOM_BUILD_TYPE := OFFICIAL
 TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_LAUNCHER_CHOICE := lawnchair
 
 # Gapps
 TARGET_GAPPS_ARCH := arm64
