@@ -444,6 +444,11 @@
          Used to decide if the user can change the colors -->
     <bool name="config_multiColorBatteryLed">false</bool>
 
+    <!-- Display 90Hz blacklist. Apps that do not work well when the display refreshes at 90Hz.
+         When these apps are visible, the display's refresh rate gets fixed to 60Hz. -->
+    <string-array name="config_highRefreshRateBlacklist">
+        <item>com.touchtype.swiftkey.beta</item>
+        <item>com.touchtype.swiftkey</item>
+    </string-array>
+
 </resources>
-
-
