@@ -116,7 +116,7 @@
     <string name="config_SmartChargingResumeValue" translatable="false">0</string>
 
     <!-- Whether device has warp charging support -->
-    <bool name="config_hasWarpCharger">true</bool>
+    <bool name="config_hasDashCharger">true</bool>
 
     <!-- Default state for LiveDisplay -->
     <bool name="config_liveDisplayAvailable">true</bool>
