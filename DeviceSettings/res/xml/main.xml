@@ -18,6 +18,7 @@
         <Preference
             android:key="panel_category"
             android:title="@string/panel_category_title"
+            android:icon="@drawable/ic_panel_modes_icon"
             android:summary="@string/panel_category_summary"
             android:persistent="false" >
             <intent android:action="android.intent.action.MAIN"
@@ -25,19 +26,10 @@
                     android:targetClass="org.aosp.device.DeviceSettings.PanelSettingsActivity" />
         </Preference>
 
-        <SwitchPreference
-            android:key="hbm"
-            android:summary="@string/hbm_mode_summary"
-            android:title="@string/hbm_mode_title" />
-
-        <SwitchPreference
-            android:key="dc"
-            android:summary="@string/dc_mode_summary"
-            android:title="@string/dc_mode_title" />
-
         <Preference
             android:key="doze"
             android:persistent="false"
+            android:icon="@drawable/ic_doze"
             android:title="@string/custom_doze_settings_title"
             android:summary="@string/custom_doze_settings_summary">
             <intent
@@ -49,6 +41,7 @@
         <Preference
             android:key="touchscreen_gesture_settings"
             android:persistent="false"
+            android:icon="@drawable/ic_gestures_icon"
             android:title="@string/touchscreen_gesture_settings_title"
             android:summary="@string/touchscreen_gesture_settings_summary">
             <intent
@@ -56,6 +49,18 @@
                     android:targetPackage="com.android.touch.gestures"
                     android:targetClass="com.android.touch.gestures.TouchscreenGestureSettings" />
         </Preference>
+
+        <SwitchPreference
+            android:key="hbm"
+            android:icon="@drawable/ic_hbm_mode_icon"
+            android:summary="@string/hbm_mode_summary"
+            android:title="@string/hbm_mode_title" />
+
+        <SwitchPreference
+            android:key="dc"
+            android:icon="@drawable/ic_dc_mode_icon"
+            android:summary="@string/dc_mode_summary"
+            android:title="@string/dc_mode_title" />
 
     </PreferenceCategory>
 
@@ -68,6 +73,7 @@
             android:dialogTitle="@string/notification_slider_selection_dialog_title"
             android:title="@string/notification_slider_top_position"
             android:summary="%s"
+            android:icon="@drawable/ic_up_icon"
             android:entries="@array/notification_slider_action_entries"
             android:entryValues="@array/notification_slider_action_entry_values" />
 
@@ -76,6 +82,7 @@
             android:dialogTitle="@string/notification_slider_selection_dialog_title"
             android:title="@string/notification_slider_middle_position"
             android:summary="%s"
+            android:icon="@drawable/ic_middle_icon"
             android:entries="@array/notification_slider_action_entries"
             android:entryValues="@array/notification_slider_action_entry_values" />
 
@@ -84,6 +91,7 @@
           android:dialogTitle="@string/notification_slider_selection_dialog_title"
           android:title="@string/notification_slider_bottom_position"
           android:summary="%s"
+          android:icon="@drawable/ic_down_icon"
           android:entries="@array/notification_slider_action_entries"
           android:entryValues="@array/notification_slider_action_entry_values" />
     </PreferenceCategory>
