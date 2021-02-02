@@ -216,6 +216,7 @@ PRODUCT_PACKAGES += \
     init.qti.ims.sh \
     init.qti.qcv.sh \
     init.recovery.qcom.rc \
+    init.smartcharging.rc \
     init.target.rc \
     ueventd.qcom.rc \
     vendor.oem_ftm.rc \
