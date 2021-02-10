@@ -33,12 +33,6 @@
             android:icon="@drawable/rr_hbm_icon"
             android:summary="@string/hbm_autobrightness_threshold_summary" />
 
-        <SwitchPreference
-            android:key="dc"
-            android:icon="@drawable/rr_dc_dim_icon"
-            android:summary="@string/dc_mode_summary"
-            android:title="@string/dc_mode_title" />
-
     </PreferenceCategory>
 
     <PreferenceCategory

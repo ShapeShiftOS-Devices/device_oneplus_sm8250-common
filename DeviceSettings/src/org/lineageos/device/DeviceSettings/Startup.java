@@ -42,11 +42,6 @@ public class Startup extends BroadcastReceiver {
         mHBM = true;
         restore(HBMModeSwitch.getFile(), enabled);
         }
-        enabled = sharedPrefs.getBoolean(DeviceSettings.KEY_DC_SWITCH, false);
-        if (enabled) {
-        mHBM = false;
-        restore(DCModeSwitch.getFile(), enabled);
-        }
 
         Utils.enableService(context);
     }
