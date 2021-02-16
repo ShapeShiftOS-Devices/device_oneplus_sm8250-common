@@ -12,6 +12,9 @@
 #Load WLAN driver
 
 import /vendor/etc/init/hw/init.cust.rc
+import /vendor/etc/init/hw/init.oem.debug.rc
+import /vendor/etc/init/hw/init.oem.minidump.sdx55m.rc
+import /vendor/etc/init/hw/init.oem.sec.rc
 
 on property:wlan.driver.status=ok
     start load_wlan_driver
@@ -40,7 +43,42 @@ service wlchgd /vendor/bin/wlchgd
     seclabel u:r:wlchgd:s0
     group root system
 
+service hvdcp /system/bin/hvdcp
+    class core
+    user root
+    disabled
+
+on property:persist.usb.hvdcp.detect=true
+    start hvdcp
+
+on property:persist.usb.hvdcp.detect=false
+    stop hvdcp
+
+service charger_monitor /system/bin/charger_monitor
+    user root
+    group root
+    disabled
+
+service qbcharger /charger -m 1
+    disabled
+    oneshot
+
+on property:sys.qbcharger.enable=true
+    start qbcharger
+
+on property:sys.qbcharger.enable=false
+    stop qbcharger
+
 on fs
+    mkdir /mnt/vendor/op1 0660 system system
+    mkdir /mnt/vendor/op2 0660 system system
+    mkdir /mnt/vendor/cust1 0660 system system
+    mkdir /mnt/vendor/cust2 0660 system system
+    mkdir /mnt/vendor/my_cota 0660 system system
+    wait /mnt/vendor/op2
+    chown system system /mnt/vendor/op2
+    mkdir /mnt/vendor/op2/rbr_log 0770 system system
+    setprop vendor.oem.rbr.log.clean 1
     mount ext4 /dev/block/bootdevice/by-name/op1 /mnt/vendor/op1 ro barrier=1 discard context=u:object_r:op1_file:s0
     mount ext4 /dev/block/bootdevice/by-name/op2 /mnt/vendor/op2 noatime nosuid nodev barrier=1
     chown system system /mnt/vendor/op2
@@ -224,6 +262,36 @@ on boot
    write /proc/sys/net/ipv4/tcp_mtu_probing 1
 #endif /*VENDOR_EDIT*/
 
+    chmod 0644 /d/regmap/0-0034/registers
+    chmod 0644 /d/regmap/0-0035/registers
+    chmod 0644 /d/regmap/0-0042/registers
+
+    chmod 0666 /sys/class/drm/card0-DSI-1/SRGB
+    chmod 0666 /sys/class/drm/card0-DSI-1/DCI_P3
+    chmod 0666 /sys/class/drm/card0-DSI-1/hbm
+    chmod 0666 /sys/class/drm/card0-DSI-1/aod
+    chmod 0666 /sys/class/drm/card0-DSI-1/night_mode
+    chmod 0666 /sys/class/drm/card0-DSI-1/panel_serial_number
+    chmod 0666 /sys/class/drm/card0-DSI-1/oneplus_mode
+    chmod 0666 /sys/class/drm/card0-DSI-1/adaption_mode
+    chmod 0666 /sys/class/drm/card0-DSI-1/notify_fppress
+    chmod 0666 /sys/class/drm/card0-DSI-1/dim_alpha
+    chmod 0666 /sys/class/drm/card0-DSI-1/notify_dim
+    chmod 0666 /sys/class/drm/card0-DSI-1/notify_aod
+    chmod 0666 /sys/class/drm/card0-DSI-1/force_screenfp
+    chmod 0666 /sys/class/drm/card0-DSI-1/native_display_p3_mode
+    chmod 0666 /sys/class/drm/card0-DSI-1/native_display_wide_color_mode
+    chmod 0666 /sys/class/drm/card0-DSI-1/native_display_srgb_color_mode
+    chmod 0666 /sys/class/drm/card0-DSI-1/hbm_brightness
+    chmod 0666 /sys/devices/platform/soc/soc:qcom,dsi-display-primary/dynamic_dsi_clock
+    chown radio radio /sys/devices/platform/soc/soc:qcom,dsi-display-primary/dynamic_dsi_clock
+    chown radio radio /proc/force_reset
+    chmod 0666 /sys/class/drm/card0-DSI-1/native_display_loading_effect_mode
+    chmod 0666 /sys/class/drm/card0-DSI-1/native_display_customer_srgb_mode
+    chmod 0666 /sys/class/drm/card0-DSI-1/native_display_customer_p3_mode
+    chmod 0666 /sys/class/drm/card0-DSI-1/dimlayer_bl_en
+    chmod 0666 /sys/class/drm/card0-DSI-1/dither_en
+
 on init
     setprop vendor.boot.verifiedbootstate ${ro.boot.verifiedbootstate}
     setprop vendor.boot.hw_version ${ro.boot.hw_version}
@@ -237,6 +305,7 @@ on init
     #restorecon /dev/wlchg
 
 on post-fs
+    mkdir /mnt/vendor/op2/recovery 0770 root system
 #ifdef VENDOR_EDIT
 #oscar.wei@SYSTEM, 2019/10/02, [AN-604] opdiagnose porting, create folder and binary file.
     mkdir /mnt/vendor/persist/OPDiagnose 0770 system system
@@ -327,6 +396,8 @@ on post-fs
     chmod 660 /sys/class/thermal/cooling_device14/cur_state
 
 on post-fs-data
+    mkdir /data/reserve-lib 0775 system system
+
     mkdir /data/vendor/oemnvitems 0771 radio radio
     #brandon.zeng@Conn,2020/08/11. move data path to post-fs-data
     mkdir /data/vendor/nfc 0770 nfc nfc
@@ -647,6 +718,10 @@ service copy_qxdm_log /system_ext/bin/OPDiagdataCopy -q ${copy.qxdm.log}
 #ifdef VENDOR_EDIT
 #kim@bsp 2019/10/25 add to fix apsd wrong issue when boot with dash connected
 on property:sys.boot_completed=1
+    copy /vendor/etc/OnePlus_QC_LTM_Commercial_SM8250_2020_02_07.pfm /mnt/vendor/persist/data/pfm/licenses/1000-1000-no-exp-2013248336.pfm
+    chmod 0600 /mnt/vendor/persist/data/pfm/licenses/1000-1000-no-exp-2013248336.pfm
+    chown system system /mnt/vendor/persist/data/pfm/licenses/1000-1000-no-exp-2013248336.pfm
+
     write /sys/module/smb5_lib/parameters/sys_boot_complete 1
 #@bsp Add OTG switch
 on property:persist.sys.oem.otg_support=true
@@ -861,3 +936,12 @@ on property:persist.sys.iolimiter.enable=true
 	chown system system /sys/module/oneplus_healthinfo/parameters/ohm_sample_time
 	chown system system /sys/module/oneplus_healthinfo/parameters/ohm_action_ctrl
 	chown system system /proc/iolimit_enable
+
+on property:ro.boot.project_codename=instantnoodle
+    setprop persist.radio.multisim.config dsds
+
+on property:ro.boot.project_codename=instantnoodlep
+    setprop persist.radio.multisim.config dsds
+
+on property:ro.boot.project_codename=kebab
+    setprop persist.radio.multisim.config dsds
