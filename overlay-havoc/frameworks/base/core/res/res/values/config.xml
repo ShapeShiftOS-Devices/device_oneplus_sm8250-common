@@ -73,14 +73,8 @@
     <!-- Whether the device supports Smart Pixels -->
     <bool name="config_enableSmartPixels">true</bool>
 
-    <!-- Wired/BT headset focus mode -->
-    <bool name="config_deviceRingtoneFocusMode">true</bool>
-
     <!-- Whether device has a notch -->
     <bool name="config_haveNotch">true</bool>
-
-    <!-- Path to fast charging status file to detect whether an oem fast charger is active -->
-    <string name="config_oemFastChargerStatusPath" translatable="false">/sys/class/power_supply/battery/fastchg_status</string>
 
     <!-- Defines the sysfs attribute path used by the device
          to enable/disable DC dimming. -->
