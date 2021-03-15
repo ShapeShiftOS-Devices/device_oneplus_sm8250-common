@@ -33,5 +33,7 @@
     <!-- Whether device has screen off FOD support -->
     <bool name="config_supportScreenOffFod">false</bool>
 
+    <!-- Whether to show min/max refresh rate in display settings -->
+    <bool name="config_show_refresh_rate_controls">true</bool>
 </resources>
 
