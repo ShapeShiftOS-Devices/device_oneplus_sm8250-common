@@ -109,6 +109,3 @@
 /sys/devices/virtual/misc/msm_qcelp/wakeup[0-9]+(/.*)? u:object_r:sysfs_wakeup:s0
 /sys/devices/virtual/misc/msm_wma/wakeup[0-9]+(/.*)? u:object_r:sysfs_wakeup:s0
 /sys/devices/virtual/misc/msm_wmapro/wakeup[0-9]+(/.*)? u:object_r:sysfs_wakeup:s0
-
-# Vibrator
-/sys/devices/platform/soc/a8c000.i2c/i2c-3/3-005a/leds/vibrator/level u:object_r:sysfs_vibrator:s0
