@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.carbonrom.settings.slider_settings.utils;
+package org.shapeshift.settings.slider_settings.utils;
 
 import java.util.HashMap;
 import java.util.Map;

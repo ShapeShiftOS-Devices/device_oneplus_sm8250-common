@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.carbonrom.settings.slider_settings;
+package org.shapeshift.settings.slider_settings;
 
 import android.Manifest;
 import android.app.NotificationManager;
@@ -44,7 +44,7 @@ import android.view.KeyEvent;
 import com.android.internal.os.DeviceKeyHandler;
 import com.android.internal.util.ArrayUtils;
 
-import org.carbonrom.settings.slider_settings.utils.Constants;
+import org.shapeshift.settings.slider_settings.utils.Constants;
 
 public class KeyHandler implements DeviceKeyHandler {
 

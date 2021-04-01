@@ -23,7 +23,7 @@
 
     <!-- Names of the key handler classes -->
     <string-array name="config_deviceKeyHandlerClasses" translatable="false">
-        <item>org.carbonrom.settings.slider_settings.KeyHandler</item>
+        <item>org.shapeshift.settings.slider_settings.KeyHandler</item>
     </string-array>
 
     <!-- The list of vendor package signatures that should also be considered

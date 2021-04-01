@@ -17,7 +17,7 @@
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           android:sharedUserId="android.uid.system"
-          package="org.carbonrom.settings.slider_settings"
+          package="org.shapeshift.settings.slider_settings"
           android:versionCode="1"
           android:versionName="1.0" >
 
@@ -53,7 +53,7 @@
 
         <provider
             android:name=".ConfigPanelSearchIndexablesProvider"
-            android:authorities="org.carbonrom.settings.slider_settings"
+            android:authorities="org.shapeshift.settings.slider_settings"
             android:multiprocess="false"
             android:grantUriPermissions="true"
             android:permission="android.permission.READ_SEARCH_INDEXABLES"

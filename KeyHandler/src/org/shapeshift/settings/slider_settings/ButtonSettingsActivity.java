@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.carbonrom.settings.slider_settings;
+package org.shapeshift.settings.slider_settings;
 
 import android.os.Bundle;
 import android.preference.PreferenceActivity;

@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.carbonrom.settings.slider_settings;
+package org.shapeshift.settings.slider_settings;
 
 
 import android.database.Cursor;
@@ -65,7 +65,7 @@ public class ConfigPanelSearchIndexablesProvider extends SearchIndexablesProvide
         ref[COLUMN_INDEX_XML_RES_CLASS_NAME] = null;
         ref[COLUMN_INDEX_XML_RES_ICON_RESID] = sir.iconResId;
         ref[COLUMN_INDEX_XML_RES_INTENT_ACTION] = "com.android.settings.action.EXTRA_SETTINGS";
-        ref[COLUMN_INDEX_XML_RES_INTENT_TARGET_PACKAGE] = "org.carbonrom.settings.slider_settings";
+        ref[COLUMN_INDEX_XML_RES_INTENT_TARGET_PACKAGE] = "org.shapeshift.settings.slider_settings";
         ref[COLUMN_INDEX_XML_RES_INTENT_TARGET_CLASS] = sir.className;
         return ref;
     }
