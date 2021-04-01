@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.lineageos.settings.doze;
+package org.shapeshift.settings.doze;
 
 import android.app.Service;
 import android.content.BroadcastReceiver;

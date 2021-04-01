@@ -28,6 +28,6 @@
     <bool name="config_supportScreenOffFod">false</bool>
 
     <!-- Device specific doze package -->
-    <string name="config_customDozePackage">org.lineageos.settings.doze/org.lineageos.settings.doze.DozeSettingsActivity</string>
+    <string name="config_customDozePackage">org.shapeshift.settings.doze/org.shapeshift.settings.doze.DozeSettingsActivity</string>
 
 </resources>
