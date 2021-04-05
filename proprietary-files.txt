@@ -390,40 +390,40 @@ vendor/etc/init/dpmQmiMgr.rc|1538743661a5c48c15cd105beaad20f72953885a
 vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so|9b0fea7960b0558206bfc10f341bcbb86e9ba11c
 vendor/lib64/libdpmqmihal.so|f3cd740f6ff59a32287d36d52e0ee0c5a0d99230
 
-# DRM
-vendor/bin/hw/vendor.qti.hardware.qseecom@1.0-service
-vendor/bin/qseecomd
-vendor/etc/init/qseecomd.rc
-vendor/etc/init/vendor.qti.hardware.qseecom@1.0-service.rc
-vendor/lib64/hw/vendor.qti.hardware.qseecom@1.0-impl.so
-vendor/lib64/libcpion.so
-vendor/lib64/libdrmfs.so
-vendor/lib64/libdrmtime.so
-vendor/lib64/libGPreqcancel.so
-vendor/lib64/libGPreqcancel_svc.so
-vendor/lib64/libops.so
-vendor/lib64/libqisl.so
-vendor/lib64/libQSEEComAPI.so
-vendor/lib64/librpmb.so
-vendor/lib64/libsecureui.so
-vendor/lib64/libsecureui_svcsock.so
-vendor/lib64/libSecureUILib.so
-vendor/lib64/libspl.so
-vendor/lib64/libssd.so
-vendor/lib64/libStDrvInt.so
-vendor/lib64/libtzdrmgenprov.so
-vendor/lib64/vendor.qti.hardware.qseecom@1.0.so
+# DRM - from alioth - V12.0.2.0.RKHMIXM
+vendor/bin/hw/vendor.qti.hardware.qseecom@1.0-service|ffbf257b96f2e7a69d192dff0badf636a4f805e4
+vendor/bin/qseecomd|1c486b0ee7b785da8c3e2f9e65676706095cd4f7
+vendor/etc/init/qseecomd.rc|9c3b9c649e2bb8959b14d0e1278a390ddb15dc5e
+vendor/etc/init/vendor.qti.hardware.qseecom@1.0-service.rc|0f43244d70d5efc1e4f089b926a9dc4f59e53db1
+vendor/lib64/hw/vendor.qti.hardware.qseecom@1.0-impl.so|7d3e2b82132064b983a903b27d7a815c1c696b10
+vendor/lib64/libcpion.so|39545c8ef7082dae1aa27ebab7803d03016949bb
+vendor/lib64/libdrmfs.so|b1dcca4fe7b33b9382f2bc662412923785e7b3a5
+vendor/lib64/libdrmtime.so|7bcdaeb6cb15276a030b2a6a08bc1a42366875ee
+vendor/lib64/libGPreqcancel.so|7e47b162a5baa4570a8f53f4d4451fd57c391210
+vendor/lib64/libGPreqcancel_svc.so|32940130b49f6b0dd16a9effe1b5fd0858e18620
+vendor/lib64/libops.so|b2223e64db9d8f84262da7a8621013d3c63b6c98
+vendor/lib64/libqisl.so|4a2f72346c7f4b3368b88582da7cc7487a3be5ce
+vendor/lib64/libQSEEComAPI.so|d42c36c6df49af5f0018906963afc79a1eabcad1
+vendor/lib64/librpmb.so|b8dde9e4aa0f8211c3e5f6bad018645eeb73c6e1
+vendor/lib64/libsecureui.so|af21f03e459f9af30ab215434322f017c42ff152
+vendor/lib64/libsecureui_svcsock.so|1e258d6ed38ddaaf141f485ed2f2c9344fd1ed45
+vendor/lib64/libSecureUILib.so|fd28f025f6d5d6fdfb0fb65622f01c4ad6c73c6f
+vendor/lib64/libspl.so|0fa8c0711f72fc8a914dce044cf8dddd79ee62e1
+vendor/lib64/libssd.so|2fee29043e7654ab70e3c1b7a99c66b047713310
+vendor/lib64/libStDrvInt.so|18ab5643da33bfde618d4352729a72492487c5da
+vendor/lib64/libtzdrmgenprov.so|d05a25beba5850ba02edc7a78833b6a274a5281f
+vendor/lib64/vendor.qti.hardware.qseecom@1.0.so|8fffd318d709c3bb1789e3d1dc053d6ebcbdf6f4
 
-# ESE
-vendor/bin/hw/vendor.qti.esepowermanager@1.1-service
-vendor/etc/init/vendor.qti.esepowermanager@1.1-service.rc
-vendor/lib64/hw/vendor.qti.esepowermanager@1.1-impl.so
-vendor/lib64/vendor.qti.esepowermanager@1.0.so
-vendor/lib64/vendor.qti.esepowermanager@1.1.so
+# ESE - from alioth - V12.0.2.0.RKHMIXM
+vendor/bin/hw/vendor.qti.esepowermanager@1.1-service|3e9c23f5f7b0ae7a1618ae656b2e6ed3035db2e0
+vendor/etc/init/vendor.qti.esepowermanager@1.1-service.rc|3c024c7135ec3dd8658624509ee61396a74f1ede
+vendor/lib64/hw/vendor.qti.esepowermanager@1.1-impl.so|ff33f8e743dba93ca6f5ccb2d3299840d6cad057
+vendor/lib64/vendor.qti.esepowermanager@1.0.so|63bdca6892d06b032c1ac43f510c9626adf3dbce
+vendor/lib64/vendor.qti.esepowermanager@1.1.so|a9a95bb466b8cd48c368080b03a19296af3cf1b6
 
-# Feature enabler client
-vendor/bin/feature_enabler_client
-vendor/etc/init/feature_enabler_client.rc
+# Feature enabler client - from alioth - V12.0.2.0.RKHMIXM
+vendor/bin/feature_enabler_client|899928d99fc22576ad65dac035f9f33e0efa669d
+vendor/etc/init/feature_enabler_client.rc|7c8e7cf20093d1a6d94d7de2debd53a7e51f8c29
 
 # FM - from burton - LA.UM.9.12.r1-09000-SMxx50.0
 vendor/lib/hw/vendor.qti.hardware.fm@1.0-impl.so|2eaa15c7325454b13303f8e306611956b8e893ef
@@ -658,9 +658,9 @@ vendor/lib64/vendor.pixelworks.hardware.feature@1.0.so
 vendor/bin/msm_irqbalance|c455f306eb91fa3870bddb6ef31833aec60c4f01
 vendor/etc/msm_irqbalance.conf|39d0d339b3551e44258360abdb6e55e047983485
 
-# Listen - OOS
-vendor/lib/hw/sound_trigger.primary.kona.so
-vendor/lib/libsmwrapper.so
+# Listen - from alioth - V12.0.2.0.RKHMIXM
+vendor/lib/hw/sound_trigger.primary.kona.so|d7ef088c1905940e7d0280b7f810795dfd903af1
+vendor/lib/libsmwrapper.so|636665d88d3f9c00be276cf3011e1165061bc69e
 
 # Listen - from burton - LA.UM.9.12.r1-09000-SMxx50.0
 vendor/lib/libadpcmdec.so|491fedbdcf9a395340ce4142c277156c0056bcf8
@@ -680,18 +680,18 @@ system_ext/lib64/libmmosal.so|378098a961e465b5d14a29f5bc2320e10c88580c
 vendor/etc/system_properties.xml|f859685e7d871600942a38231dd15f7a09d0562b
 vendor/lib64/libmmosal.so|f6ed771b60b03cccbd7339499db06d861a5450d9
 
-# Neural networks
-vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-qti
-vendor/etc/init/android.hardware.neuralnetworks@1.3-service-qti.rc
--vendor/etc/vintf/manifest/android.hardware.neuralnetworks@1.3-service-qti-hta.xml
--vendor/etc/vintf/manifest/android.hardware.neuralnetworks@1.3-service-qti.xml
-vendor/lib64/libhexagon_nn_stub.so
-vendor/lib64/libhta.so
-vendor/lib64/libhta_hexagon_runtime.so
-vendor/lib64/unnhal-acc-adreno.so
-vendor/lib64/unnhal-acc-common.so
-vendor/lib64/unnhal-acc-hta.so
-vendor/lib64/unnhal-acc-hvx.so
+# Neural networks - from alioth - V12.0.2.0.RKHMIXM
+vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-qti|f42d672eeed8d1f2a6775932da77cca329703cfa
+vendor/etc/init/android.hardware.neuralnetworks@1.3-service-qti.rc|4b7f2c5f914f3eef38f19936c0a06efc09b5b28c
+-vendor/etc/vintf/manifest/android.hardware.neuralnetworks@1.3-service-qti-hta.xml|57e182a296097870a4c4ed1579c67da20c2b69de
+-vendor/etc/vintf/manifest/android.hardware.neuralnetworks@1.3-service-qti.xml|ac07e83ba7c2a87a2f216f04ec84df4539ea8507
+vendor/lib64/libhexagon_nn_stub.so|04876d89a6a949624d15cdfbc339fd18b5c518a3
+vendor/lib64/libhta.so|f8b4719e55a6237a1537b8ff04d1cd48d260a9b1
+vendor/lib64/libhta_hexagon_runtime.so|843fd8c72052514d48ee85850a4c92635eccf4fa
+vendor/lib64/unnhal-acc-adreno.so|14892c836900254eaba41fd9f9dc03c42f17da33
+vendor/lib64/unnhal-acc-common.so|e7c09110028f5f896796a0e2aa97451fa020344e
+vendor/lib64/unnhal-acc-hta.so|cfe9271d132aab52a4059d16815f254bebf2ff4c
+vendor/lib64/unnhal-acc-hvx.so|511c17806624b2d4e2533b6d3b5a2fe2468558b5
 
 # NFC
 system/etc/nfcee_access.xml
@@ -814,13 +814,13 @@ vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc|a03a9a1c818595b19272ea6
 vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so|8d13f218f99c33d4f8e1986a101d5b56effaa5ac
 vendor/lib64/vendor.qti.hardware.alarm@1.0.so|b45e9bc0ebd8e10e65c4c9e3605c94d585da5fda
 
-# QCC
-vendor/bin/hw/vendor.qti.hardware.qccvndhal@1.0-service
-vendor/etc/init/vendor.qti.hardware.qccvndhal@1.0-service.rc
-vendor/lib64/hw/vendor.qti.hardware.qccvndhal@1.0-impl.so
-vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so
-vendor/lib64/vendor.qti.hardware.qccvndhal@1.0-halimpl.so
-vendor/lib64/vendor.qti.hardware.qccvndhal@1.0.so
+# QCC - from alioth - V12.0.2.0.RKHMIXM
+vendor/bin/hw/vendor.qti.hardware.qccvndhal@1.0-service|f8a83cec1452b6145180f160039aa5de5d1dd383
+vendor/etc/init/vendor.qti.hardware.qccvndhal@1.0-service.rc|afeb332a4750a11587658fcc9a75a27f63bbccdd
+vendor/lib64/hw/vendor.qti.hardware.qccvndhal@1.0-impl.so|fa0c40dc085c8966803001b4b03fe8b3e683509f
+vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so|69badb1858cafc4863d57623acebab31485e21e9
+vendor/lib64/vendor.qti.hardware.qccvndhal@1.0-halimpl.so|85e99465a939f4376c1d7a4c17bff74bedf031bb
+vendor/lib64/vendor.qti.hardware.qccvndhal@1.0.so|80d8fa77d5557386013931338709680ac2964c7b
 
 # QMI
 etc/permissions/privapp-permissions-qti.xml
@@ -1044,14 +1044,14 @@ vendor/firmware/tp/LIMIT_19821_S3908.img
 vendor/firmware/tp/LIMIT_19821_SY761.img
 vendor/firmware/tp/LIMIT_19821_SY771.img
 
-# Trusted Execution Environment connector
-vendor/bin/hw/vendor.qti.hardware.qteeconnector@1.0-service
-vendor/etc/init/vendor.qti.hardware.qteeconnector@1.0-service.rc
-vendor/lib64/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so
-vendor/lib64/libGPQTEEC_vendor.so
-vendor/lib64/libGPTEE_vendor.so
-vendor/lib64/libQTEEConnector_vendor.so
-vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so
+# Trusted Execution Environment connector - from alioth - V12.0.2.0.RKHMIXM
+vendor/bin/hw/vendor.qti.hardware.qteeconnector@1.0-service|1e81ee7975db430cc1ccd6ec9cb9817ac205b60c
+vendor/etc/init/vendor.qti.hardware.qteeconnector@1.0-service.rc|c966350ee67d3a7c73ca7184e3725264025d16f5
+vendor/lib64/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so|3ae4d032be7ef87c579de4b68bf7cb13121b4bb7
+vendor/lib64/libGPQTEEC_vendor.so|542d3de432e826d02290a04b3ec8fe87d57f7874
+vendor/lib64/libGPTEE_vendor.so|842834bc0537d56a16de4070f4505a0777198e4b
+vendor/lib64/libQTEEConnector_vendor.so|931780d22c82839a58d0c61f5f6e4bf9f18ccfca
+vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so|b37dd4d3819fc098f210b0c0646dcd42a89b7fb5
 
 # Trusted User Interface - from burton - LA.UM.9.12.r1-09000-SMxx50.0
 vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti|5fd66e37ada01c7740419e77ce3c24507d52d479
