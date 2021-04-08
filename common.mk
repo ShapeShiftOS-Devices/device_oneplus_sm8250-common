@@ -455,6 +455,10 @@ PRODUCT_PACKAGES += \
     qti_telephony_utils.xml \
     telephony-ext
 
+# Touch
+PRODUCT_PACKAGES += \
+    vendor.lineage.touch@1.0-service.oneplus_kona
+
 PRODUCT_BOOT_JARS += \
     telephony-ext
 
