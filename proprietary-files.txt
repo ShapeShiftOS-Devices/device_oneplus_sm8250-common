@@ -965,12 +965,12 @@ vendor/radio/qcril_database/upgrade/6_version_update_ecc_table.sql
 vendor/radio/qcril_database/upgrade/7_version_update_ecc_table.sql
 vendor/radio/qcril_database/upgrade/8_version_update_ecc_table.sql
 
-# Secure element - from alioth - V12.0.2.0.RKHMIXM
-vendor/bin/hw/vendor.qti.secure_element@1.2-service|97c3b1f7bf761dd48f6dec52e882469ef4c54754
-vendor/etc/init/vendor.qti.secure_element@1.2-service.rc|cb8e44a67709a5d9c2f0544058d79eb9f6faad7b
-vendor/lib64/android.hardware.secure_element@1.0-impl.so|8505effeeae0f1aa17fc01ed3f59ff5b11814bdb
-vendor/lib64/jcos_nq_client.so|f8c6c6ceaefe2125dca1c3b05a094fe2c9066723
-vendor/lib64/ls_nq_client.so|52172e3dc8611f1153286e0fc9ee9ed720af55a0
+# Secure element
+vendor/bin/hw/vendor.qti.secure_element@1.2-service
+vendor/etc/init/vendor.qti.secure_element@1.2-service.rc
+vendor/lib64/android.hardware.secure_element@1.0-impl.so
+vendor/lib64/jcos_nq_client.so
+vendor/lib64/ls_nq_client.so
 
 # Sensors
 vendor/bin/hw/vendor.qti.hardware.sensorscalibrate@1.0-service
