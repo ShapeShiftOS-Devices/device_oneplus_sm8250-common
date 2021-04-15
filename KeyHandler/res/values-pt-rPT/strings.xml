@@ -16,6 +16,9 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="device_parts_title">Definições OnePlus</string>
+  <string name="device_parts_summary">Ajustar definições específicas de dispositivos OnePlus</string>
+
   <!-- Notification slider -->
   <string name="notification_slider_category_title">Botão deslizante de notificações</string>
   <string name="notification_slider_selection_dialog_title">Ação</string>

@@ -37,7 +37,7 @@
         <!-- Additional button settings (Button settings) -->
         <activity
             android:name=".ButtonSettingsActivity"
-            android:label="@string/button_panel_title">
+            android:label="@string/device_parts_title">
             <intent-filter>
                 <action android:name="com.android.settings.action.EXTRA_SETTINGS" />
             </intent-filter>
@@ -48,7 +48,7 @@
                 android:name="com.android.settings.category"
                 android:value="com.android.settings.category.ia.homepage" />
             <meta-data android:name="com.android.settings.summary"
-                android:resource="@string/buttons_dashboard_summary" />
+                android:resource="@string/device_parts_summary" />
         </activity>
 
         <activity android:name=".KeyHandler" />

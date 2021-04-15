@@ -16,6 +16,9 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="device_parts_title">Ustawienia OnePlus</string>
+  <string name="device_parts_summary">Ustawienia OnePlus dotyczące tego urządzenia</string>
+
   <!-- Notification slider -->
   <string name="notification_slider_category_title">Panel powiadomień</string>
   <string name="notification_slider_selection_dialog_title">Akcja</string>

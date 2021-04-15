@@ -16,6 +16,9 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="device_parts_title">Cài đặt OnePlus</string>
+  <string name="device_parts_summary">Điều chỉnh cài đặt cho thiết bị OnePlus</string>
+
   <!-- Notification slider -->
   <string name="notification_slider_category_title">Thông báo trượt</string>
   <string name="notification_slider_selection_dialog_title">Tác vụ</string>

@@ -16,6 +16,9 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="device_parts_title">一加设置</string>
+  <string name="device_parts_summary">调整一加特定设备设置</string>
+
   <!-- Notification slider -->
   <string name="notification_slider_category_title">三段式通知滑钮</string>
   <string name="notification_slider_selection_dialog_title">动作</string>
