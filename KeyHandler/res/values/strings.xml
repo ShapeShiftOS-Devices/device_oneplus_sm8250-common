@@ -31,4 +31,15 @@
     <string name="notification_slider_mode_vibrate">Vibrate</string>
     <string name="notification_slider_mode_none">Normal</string>
     <string name="buttons_dashboard_summary">Alert Slider Settings</string>
+
+    <!-- Display -->
+    <string name="display_settings_title">Display</string>
+    <string name="custom_doze_settings_title">Advanced doze settings</string>
+    <string name="custom_doze_settings_summary">Handle sensor related wake events</string>
+    <string name="touchscreen_gesture_settings_title">Touchscreen gestures</string>
+    <string name="touchscreen_gesture_settings_summary">Perform various touchscreen gestures for quick actions</string>
+    <string name="dc_dimming_summary">Turn on automatic DC dimming based on sunrise, sunset &amp; brightness</string>
+    <string name="dc_dimming_title">Automated DC-Dimming</string>
+
 </resources>
+
