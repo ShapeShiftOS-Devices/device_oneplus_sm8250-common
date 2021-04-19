@@ -50,24 +50,24 @@ system_ext/lib/com.qualcomm.qti.ant@1.0.so
 system_ext/lib64/com.qualcomm.qti.ant@1.0.so
 vendor/lib64/hw/com.dsi.ant@1.0-impl.so
 
-# Audio libraries - from burton - LA.UM.9.12.r1-09000-SMxx50.0
-vendor/lib/soundfx/libasphere.so|e5b0484dd81b124e5f82cae2355a74302e81291c
-vendor/lib/soundfx/libqcbassboost.so|e7244e2344e03de6fbf5d8d5e30f33b78ec6b3ec
-vendor/lib/soundfx/libqcreverb.so|13b019b34f5bb6aa0dea4a91b77c171f77c2ec19
-vendor/lib/soundfx/libqcvirt.so|ccbd1e16b76bc61860d1f73055bd3dcd27b4be11
-vendor/lib/soundfx/libshoebox.so|f22fca7ce99d0d12eaee8484b820f8c3c50651c2
-vendor/lib/libacdb-fts.so|01ec6bc4722c9ff28a5138f64ebbd37b3a53617b
-vendor/lib/libacdbloader.so|6af382ef784f57ff372a76a8f98169e8a6ec0374
-vendor/lib/libacdbrtac.so|3e9a84bb3aaa8797d95b0485b75578f50a697f91
-vendor/lib/libadiertac.so|2d206cc8bfd948a2e9535061ec1b07ad9288ef94
-vendor/lib/libadm.so|a4a6d4b59ff78a3d2d8ec03b7b599db42e7ddb08
-vendor/lib/libaudcal.so|605084c2494ee8c54239b45b2678c081e6506d6b
-vendor/lib/libqtigef.so|511eaa9c87c0f99c0c8c47f9104d196c36b5fb7b
+# Audio libraries
+vendor/lib/soundfx/libasphere.so
+vendor/lib/soundfx/libhaptic_effect.so
+vendor/lib/soundfx/libqcbassboost.so
+vendor/lib/soundfx/libqcreverb.so
+vendor/lib/soundfx/libqcvirt.so
+vendor/lib/soundfx/libshoebox.so
+vendor/lib/libacdb-fts.so
+vendor/lib/libacdbloader.so
+vendor/lib/libacdbrtac.so
+vendor/lib/libadiertac.so
+vendor/lib/libadm.so
 
 # Audio - OOS
 vendor/lib/libadsprpc.so
+vendor/lib/libaudcal.so
+vendor/lib/libqtigef.so
 vendor/lib/libssrec.so
-vendor/lib/soundfx/libhaptic_effect.so
 vendor/lib64/libadsprpc.so
 
 # Authsecret - from burton - LA.UM.9.12.r1-09000-SMxx50.0
