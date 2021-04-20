@@ -38,17 +38,19 @@
         <activity
             android:name=".ButtonSettingsActivity"
             android:label="@string/device_parts_title">
+            <meta-data
+                android:name="com.android.settings.order"
+                android:value="1" />
             <intent-filter>
-                <action android:name="com.android.settings.action.EXTRA_SETTINGS" />
+                <action android:name="com.android.settings.action.IA_SETTINGS" />
             </intent-filter>
-            <meta-data
-                android:name="com.android.settings.icon"
-                android:resource="@drawable/ic_settings_additional_buttons" />
-            <meta-data
-                android:name="com.android.settings.category"
-                android:value="com.android.settings.category.ia.homepage" />
             <meta-data android:name="com.android.settings.summary"
                 android:resource="@string/device_parts_summary" />
+            <meta-data android:name="com.android.settings.category"
+                       android:value="com.android.settings.category.ia.system" />
+            <meta-data
+                android:name="com.android.settings.icon"
+                android:resource="@drawable/ic_parts_device" />
         </activity>
 
         <activity android:name=".KeyHandler" />
@@ -66,5 +68,4 @@
         </provider>
     </application>
 
->>>>>>> c3fab85... sm8250-common: Make Keyhandler configurable
 </manifest>
