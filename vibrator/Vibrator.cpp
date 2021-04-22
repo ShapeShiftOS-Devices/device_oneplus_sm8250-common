@@ -127,7 +127,7 @@ InputFFDevice::InputFFDevice()
 
     dp = opendir(INPUT_DIR);
     if (!dp) {
-        ALOGE("open %s failed, errno = %d", INPUT_DIR, errno);
+        ALOGV("open %s failed, errno = %d", INPUT_DIR, errno);
         return;
     }
 
@@ -141,13 +141,13 @@ InputFFDevice::InputFFDevice()
         snprintf(devicename, PATH_MAX, "%s%s", INPUT_DIR, dir->d_name);
         fd = TEMP_FAILURE_RETRY(open(devicename, O_RDWR));
         if (fd < 0) {
-            ALOGE("open %s failed, errno = %d", devicename, errno);
+            ALOGV("open %s failed, errno = %d", devicename, errno);
             continue;
         }
 
         ret = TEMP_FAILURE_RETRY(ioctl(fd, EVIOCGBIT(EV_FF, sizeof(ffBitmask)), ffBitmask));
         if (ret == -1) {
-            ALOGE("ioctl failed, errno = %d", errno);
+            ALOGV("ioctl failed, errno = %d", errno);
             close(fd);
             continue;
         }
@@ -216,7 +216,7 @@ int InputFFDevice::play(int effectId, uint32_t timeoutMs, long *playLengthMs) {
         if (mCurrAppId != INVALID_VALUE) {
             ret = TEMP_FAILURE_RETRY(ioctl(mVibraFd, EVIOCRMFF, mCurrAppId));
             if (ret == -1) {
-                ALOGE("ioctl EVIOCRMFF failed, errno = %d", -errno);
+                ALOGV("ioctl EVIOCRMFF failed, errno = %d", -errno);
                 goto errout;
             }
             mCurrAppId = INVALID_VALUE;
@@ -248,7 +248,7 @@ int InputFFDevice::play(int effectId, uint32_t timeoutMs, long *playLengthMs) {
 
         ret = TEMP_FAILURE_RETRY(ioctl(mVibraFd, EVIOCSFF, &effect));
         if (ret == -1) {
-            ALOGE("ioctl EVIOCSFF failed, errno = %d", -errno);
+            ALOGV("ioctl EVIOCSFF failed, errno = %d", -errno);
             goto errout;
         }
 
@@ -268,16 +268,16 @@ int InputFFDevice::play(int effectId, uint32_t timeoutMs, long *playLengthMs) {
         play.time.tv_usec = 0;
         ret = TEMP_FAILURE_RETRY(write(mVibraFd, (const void*)&play, sizeof(play)));
         if (ret == -1) {
-            ALOGE("write failed, errno = %d\n", -errno);
+            ALOGV("write failed, errno = %d\n", -errno);
             ret = TEMP_FAILURE_RETRY(ioctl(mVibraFd, EVIOCRMFF, mCurrAppId));
             if (ret == -1)
-                ALOGE("ioctl EVIOCRMFF failed, errno = %d", -errno);
+                ALOGV("ioctl EVIOCRMFF failed, errno = %d", -errno);
             goto errout;
         }
     } else if (mCurrAppId != INVALID_VALUE) {
         ret = TEMP_FAILURE_RETRY(ioctl(mVibraFd, EVIOCRMFF, mCurrAppId));
         if (ret == -1) {
-            ALOGE("ioctl EVIOCRMFF failed, errno = %d", -errno);
+            ALOGV("ioctl EVIOCRMFF failed, errno = %d", -errno);
             goto errout;
         }
         mCurrAppId = INVALID_VALUE;
@@ -313,7 +313,7 @@ int InputFFDevice::setAmplitude(uint8_t amplitude) {
 
     ret = TEMP_FAILURE_RETRY(write(mVibraFd, &ie, sizeof(ie)));
     if (ret == -1) {
-        ALOGE("write FF_GAIN failed, errno = %d", -errno);
+        ALOGV("write FF_GAIN failed, errno = %d", -errno);
         return ret;
     }
 
@@ -348,7 +348,7 @@ LedVibratorDevice::LedVibratorDevice() {
     snprintf(devicename, sizeof(devicename), "%s/%s", LED_DEVICE, "activate");
     fd = TEMP_FAILURE_RETRY(open(devicename, O_RDWR));
     if (fd < 0) {
-        ALOGE("open %s failed, errno = %d", devicename, errno);
+        ALOGV("open %s failed, errno = %d", devicename, errno);
         return;
     }
 
@@ -361,7 +361,7 @@ int LedVibratorDevice::write_value(const char *file, const char *value) {
 
     fd = TEMP_FAILURE_RETRY(open(file, O_WRONLY));
     if (fd < 0) {
-        ALOGE("open %s failed, errno = %d", file, errno);
+        ALOGV("open %s failed, errno = %d", file, errno);
         return -errno;
     }
 
@@ -408,7 +408,7 @@ int LedVibratorDevice::on(int32_t timeoutMs) {
     return 0;
 
 error:
-    ALOGE("Failed to turn on vibrator ret: %d\n", ret);
+    ALOGV("Failed to turn on vibrator ret: %d\n", ret);
     return ret;
 }
 
@@ -427,7 +427,7 @@ ndk::ScopedAStatus Vibrator::getCapabilities(int32_t* _aidl_return) {
 
     if (ledVib.mDetected) {
         *_aidl_return |= IVibrator::CAP_PERFORM_CALLBACK;
-        ALOGD("QTI Vibrator reporting capabilities: %d", *_aidl_return);
+        ALOGV("QTI Vibrator reporting capabilities: %d", *_aidl_return);
         return ndk::ScopedAStatus::ok();
     }
 
@@ -438,14 +438,14 @@ ndk::ScopedAStatus Vibrator::getCapabilities(int32_t* _aidl_return) {
     if (ff.mSupportExternalControl)
         *_aidl_return |= IVibrator::CAP_EXTERNAL_CONTROL;
 
-    ALOGD("QTI Vibrator reporting capabilities: %d", *_aidl_return);
+    ALOGV("QTI Vibrator reporting capabilities: %d", *_aidl_return);
     return ndk::ScopedAStatus::ok();
 }
 
 ndk::ScopedAStatus Vibrator::off() {
     int ret;
 
-    ALOGD("QTI Vibrator off");
+    ALOGV("QTI Vibrator off");
     if (ledVib.mDetected)
         ret = ledVib.off();
     else
@@ -460,7 +460,7 @@ ndk::ScopedAStatus Vibrator::on(int32_t timeoutMs,
                                 const std::shared_ptr<IVibratorCallback>& callback) {
     int ret;
 
-    ALOGD("Vibrator on for timeoutMs: %d", timeoutMs);
+    ALOGV("Vibrator on for timeoutMs: %d", timeoutMs);
     if (ledVib.mDetected)
         ret = ledVib.on(timeoutMs);
     else
@@ -471,11 +471,11 @@ ndk::ScopedAStatus Vibrator::on(int32_t timeoutMs,
 
     if (callback != nullptr) {
         std::thread([=] {
-            ALOGD("Starting on on another thread");
+            ALOGV("Starting on on another thread");
             usleep(timeoutMs * 1000);
-            ALOGD("Notifying on complete");
+            ALOGV("Notifying on complete");
             if (!callback->onComplete().isOk()) {
-                ALOGE("Failed to call onComplete");
+                ALOGV("Failed to call onComplete");
             }
         }).detach();
     }
@@ -487,7 +487,7 @@ ndk::ScopedAStatus Vibrator::perform(Effect effect, EffectStrength es, const std
     long playLengthMs;
     int ret;
 
-    ALOGD("Vibrator perform effect %d", effect);
+    ALOGV("Vibrator perform effect %d", effect);
 
     if (ledVib.mDetected) {
         if (const auto it = LED_EFFECTS.find(effect); it != LED_EFFECTS.end()) {
@@ -525,9 +525,9 @@ ndk::ScopedAStatus Vibrator::perform(Effect effect, EffectStrength es, const std
 
     if (callback != nullptr) {
         std::thread([=] {
-            ALOGD("Starting perform on another thread");
+            ALOGV("Starting perform on another thread");
             usleep(playLengthMs * 1000);
-            ALOGD("Notifying perform complete");
+            ALOGV("Notifying perform complete");
             callback->onComplete();
         }).detach();
     }
@@ -554,7 +554,7 @@ ndk::ScopedAStatus Vibrator::setAmplitude(float amplitude) {
     if (ledVib.mDetected)
         return ndk::ScopedAStatus(AStatus_fromExceptionCode(EX_UNSUPPORTED_OPERATION));
 
-    ALOGD("Vibrator set amplitude: %f", amplitude);
+    ALOGV("Vibrator set amplitude: %f", amplitude);
 
     if (amplitude <= 0.0f || amplitude > 1.0f)
         return ndk::ScopedAStatus(AStatus_fromExceptionCode(EX_ILLEGAL_ARGUMENT));
@@ -574,7 +574,7 @@ ndk::ScopedAStatus Vibrator::setExternalControl(bool enabled) {
     if (ledVib.mDetected)
         return ndk::ScopedAStatus(AStatus_fromExceptionCode(EX_UNSUPPORTED_OPERATION));
 
-    ALOGD("Vibrator set external control: %d", enabled);
+    ALOGV("Vibrator set external control: %d", enabled);
     if (!ff.mSupportExternalControl)
         return ndk::ScopedAStatus(AStatus_fromExceptionCode(EX_UNSUPPORTED_OPERATION));
 
