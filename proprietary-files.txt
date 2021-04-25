@@ -74,33 +74,33 @@ vendor/lib64/libadsprpc.so
 vendor/bin/hw/android.hardware.authsecret@1.0-service-qti|6baac0138fcaad2d320cb41f2d5929baea353c2e
 vendor/etc/init/android.hardware.authsecret@1.0-service-qti.rc|317b2faf7497945022f3cbefcd07f489a4686051
 
-# Bluetooth - from burton - LA.UM.9.12.r1-09000-SMxx50.0
-vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|c9f68e01e279f3fe760563092cfb3344ac340d41
+# Bluetooth - from lemonades qssi-user-11-RKQ1.201112.002-2104090029-release-keys
+vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|e0d0f47f5ab8ac0ca4b08f778729a5b340983aac
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc|f4ee3b2da2b08647447869ade86ec63f7340accc
-vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|2f0ca5919f457dc259ed9ed4a07057b7ca25ce59
-vendor/lib64/libbtnv.so|80c30ec03960b592154938ef664f8d42d0e40c1c
+vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|bb279e9cfb67856f51293725f07b567d0e28b6f3
+vendor/lib64/libbtnv.so|97a565f4ad7678525fe112e30e51bf754d02c5fa
 
-# Bluetooth (A2DP) - from burton - LA.UM.9.12.r1-09000-SMxx50.0
-vendor/lib/hw/audio.bluetooth_qti.default.so|ce37977a57aab87927719f50486363fc71999227
-vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so|78155ba158b7a053f3334b8229dd8ff0e77ed35d
-vendor/lib/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so|4228f377b993107545e869d7418dd3abb8750ba4
-vendor/lib/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so|395d9a9df03bc17ecfa0c6b779a76ab39d0aeb1f
-vendor/lib/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so|70a59df70af08dcd8595eea8365427a25b05f86a
-vendor/lib/btaudio_offload_if.so|79305d35542d2b69a0f114de57c66dcc16b9e5ab
-vendor/lib/libbluetooth_audio_session_qti.so|96d47458076a6c49d3a2c7f2cbc30cd7142b36ec
-vendor/lib/vendor.qti.hardware.bluetooth_sar@1.0.so|39294a01a6c67f8f6f28b98daf4350e15c9bafbd
-vendor/lib/vendor.qti.hardware.bluetooth_sar@1.1.so|8a5bce6145b7989192dc38f688e4e94bfdd8cec6
-vendor/lib64/hw/audio.bluetooth_qti.default.so|ff5a0c655e8f01f943bb3a81936e21472974d6b1
-vendor/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so|85a5c23d36169ba4f3c7c959fcd73ec28f2ea53b
-vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so|933ed66c7f28d8b194455ae65d66d9fc88d940f7
-vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so|7a48220a253e73e799cebe02b199e16f19c1ee93
-vendor/lib64/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so|c980e211cc3b1065b0b43ccf6da78cefebacf382
-vendor/lib64/btaudio_offload_if.so|a21f4418f709fb36dcb95a9c5783dcff94bdec5f
-vendor/lib64/libbluetooth_audio_session_qti.so|e72cd5a59ce005ef85be903c930f4982187df79f
-vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so|7866d835abc782c39b7d177629264de1bfe52e75
-vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so|bcf0a726718b037b894df4850a66d696aa99d8fa
+# Bluetooth (A2DP) - from lemonades qssi-user-11-RKQ1.201112.002-2104090029-release-keys
+vendor/lib/hw/audio.bluetooth_qti.default.so|8fd409899555bab2ec0bec525036e298a6a364b8
+vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so|9a6ac654ed3270ec880ef0ff37baf33fa4fc8194
+vendor/lib/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so|61c91107a4032634f1520340e75f015e44fd8dbc
+vendor/lib/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so|1df393fc39d60727becb875fd86716d057bed3b1
+vendor/lib/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so|923324f9b2dfa4d6d2f2969758bdd75713ea132b
+vendor/lib/btaudio_offload_if.so|29d13cf463ff767ef20ee473a4a13e8167f3326e
+vendor/lib/libbluetooth_audio_session_qti.so|1e524b5675896ae0b8a0eaa1e78c36eacbd9fa07
+vendor/lib/vendor.qti.hardware.bluetooth_sar@1.0.so|7e4587a1ac13de4d1ee8463b3aae487346f31b12
+vendor/lib/vendor.qti.hardware.bluetooth_sar@1.1.so|fbce94fed6a22fd527506d14d10a4df785b8fa25
+vendor/lib64/hw/audio.bluetooth_qti.default.so|6056a02959f4301b70412b55ad28da4b096c4bff
+vendor/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so|7f89f7b41fdd766500ca5a4460a77a3daae919fc
+vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so|8b6412d4ec8b4d9885b8ab60d4ddd9e6987bb111
+vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so|c6540576acc5e014dc045eb9a31af722a05ca5c8
+vendor/lib64/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so|00c3a21fdbd3c9430351a6083cde242455b97e5e
+vendor/lib64/btaudio_offload_if.so|f2fc92a82af96e29094bc20a64355e6b3968741e
+vendor/lib64/libbluetooth_audio_session_qti.so|ea155572208c183420ea904cedb93d574b05f806
+vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so|3f81d703a5d1b635170b01f12b185b2215992df7
+vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so|fff9d4896b3cfea0ca857788cedaac268da4778d
 
-# Bluetooth (aptX) - from burton - LA.UM.9.12.r1-09000-SMxx50.0
+# Bluetooth (aptX) - from lemonades qssi-user-11-RKQ1.201112.002-2104090029-release-keys
 system_ext/lib64/libaptX_encoder.so|9e87fed4eac0e9fe428eaf8d0db7a1af89d521e1
 system_ext/lib64/libaptXHD_encoder.so|043c055498f6e6e2b0564ad35ea17b012844cbce
 
