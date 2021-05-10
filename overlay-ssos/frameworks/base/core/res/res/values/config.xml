@@ -42,8 +42,8 @@
          1: Right side -->
     <integer name="config_alertSliderLocation">1</integer>
 
-    <!-- Whether device has dash charging support -->
-    <bool name="config_hasDashCharger">true</bool>
+    <!-- Whether device has warp charging support -->
+    <bool name="config_hasWarpCharger">true</bool>
 
     <!-- Does the battery LED support multiple colors?
          Used to decide if the user can change the colors -->
