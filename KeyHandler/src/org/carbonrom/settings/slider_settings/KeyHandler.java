@@ -78,12 +78,12 @@ public class KeyHandler implements DeviceKeyHandler {
         sSupportedSliderRingModes.put(Constants.KEY_VALUE_VIBRATE, AudioManager.RINGER_MODE_VIBRATE);
         sSupportedSliderRingModes.put(Constants.KEY_VALUE_NORMAL, AudioManager.RINGER_MODE_NORMAL);
 
-        sSupportedSliderHaptics.put(Constants.KEY_VALUE_TOTAL_SILENCE, VibrationEffect.EFFECT_THUD);
-        sSupportedSliderHaptics.put(Constants.KEY_VALUE_SILENT, VibrationEffect.EFFECT_DOUBLE_CLICK);
-        sSupportedSliderHaptics.put(Constants.KEY_VALUE_ALARMS_ONLY, VibrationEffect.EFFECT_DOUBLE_CLICK);
+        sSupportedSliderHaptics.put(Constants.KEY_VALUE_TOTAL_SILENCE, VibrationEffect.EFFECT_POP);
+        sSupportedSliderHaptics.put(Constants.KEY_VALUE_SILENT, VibrationEffect.EFFECT_POP);
+        sSupportedSliderHaptics.put(Constants.KEY_VALUE_ALARMS_ONLY, VibrationEffect.EFFECT_POP);
         sSupportedSliderHaptics.put(Constants.KEY_VALUE_PRIORTY_ONLY, VibrationEffect.EFFECT_POP);
-        sSupportedSliderHaptics.put(Constants.KEY_VALUE_VIBRATE, VibrationEffect.EFFECT_HEAVY_CLICK);
-        sSupportedSliderHaptics.put(Constants.KEY_VALUE_NORMAL, -1);
+        sSupportedSliderHaptics.put(Constants.KEY_VALUE_VIBRATE, VibrationEffect.EFFECT_THUD);
+        sSupportedSliderHaptics.put(Constants.KEY_VALUE_NORMAL, VibrationEffect.EFFECT_DOUBLE_CLICK);
     }
 
     public static final String CLIENT_PACKAGE_NAME = "com.oneplus.camera";
