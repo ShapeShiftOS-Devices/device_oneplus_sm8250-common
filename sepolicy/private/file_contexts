@@ -1,0 +1,2 @@
+# Data files
+/data/misc/camera/client_package_name                u:object_r:custom_camera_data_file:s0
