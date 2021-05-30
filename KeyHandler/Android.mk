@@ -38,5 +38,7 @@ LOCAL_RESOURCE_DIR := \
 LOCAL_PROGUARD_FLAG_FILES := proguard.flags
 
 LOCAL_MODULE_TAGS := optional
+LOCAL_STATIC_JAVA_LIBRARIES := \
+    vendor.oneplus.hardware.camera-V1.0-java
 
 include $(BUILD_PACKAGE)
