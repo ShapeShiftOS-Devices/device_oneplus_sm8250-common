@@ -229,6 +229,7 @@ system_ext/etc/permissions/dpmapi.xml|9158c9789cc7135a685b3fb27f8cc27108b51fef
 system_ext/framework/com.qti.dpmframework.jar|96a29e28b3abffb9223daadd67459e3f5a3271df
 system_ext/framework/dpmapi.jar|2e2fbe2257a697b96a644c774136da0554430d3f
 system_ext/lib64/com.qualcomm.qti.dpm.api@1.0.so|f2d02195cca305fad78402c65d090bad72955262
+system_ext/lib64/libdiag_system.so|2c18a65a2b776af9af1599dd03d72e3e4129459f
 system_ext/lib64/libdpmctmgr.so|305ff03241dd426af93ad460e616ca4f284c29bd
 system_ext/lib64/libdpmfdmgr.so|232bb4c0f9bf5603e9a1d917dfc6f9e447eb7b4b
 system_ext/lib64/libdpmframework.so|19fc8dae183a79e609b4d473de59d3449f87c7a6
