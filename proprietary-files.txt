@@ -47,8 +47,6 @@ vendor/lib/rfsa/adsp/libVDHexagonBlurless_v2_skel.so
 vendor/lib/rfsa/adsp/libvdsuperphoto_skel.so
 
 # ANT+
-system_ext/lib/com.qualcomm.qti.ant@1.0.so
-system_ext/lib64/com.qualcomm.qti.ant@1.0.so
 vendor/lib64/hw/com.dsi.ant@1.0-impl.so
 
 # Audio libraries
@@ -82,26 +80,13 @@ vendor/lib64/libbtnv.so
 # Bluetooth (A2DP)
 vendor/lib/hw/audio.bluetooth_qti.default.so
 vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
-vendor/lib/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so
-vendor/lib/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so
-vendor/lib/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so
 vendor/lib/btaudio_offload_if.so
 vendor/lib/libbluetooth_audio_session_qti.so
-vendor/lib/vendor.qti.hardware.bluetooth_sar@1.0.so
-vendor/lib/vendor.qti.hardware.bluetooth_sar@1.1.so
-vendor/lib64/hw/audio.bluetooth_qti.default.so
-vendor/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
 vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so
 vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so
 vendor/lib64/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so
-vendor/lib64/btaudio_offload_if.so
-vendor/lib64/libbluetooth_audio_session_qti.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
-
-# Bluetooth (aptX) - from crosshatch - RQ1A.201205.003
-system_ext/lib64/libaptX_encoder.so|9e87fed4eac0e9fe428eaf8d0db7a1af89d521e1
-system_ext/lib64/libaptXHD_encoder.so|043c055498f6e6e2b0564ad35ea17b012844cbce
 
 # CDSP
 vendor/bin/cdsprpcd
@@ -188,7 +173,6 @@ vendor/lib64/vendor.qti.latency@2.0.so|ab1775138a2bf0587cd6cc990a432e0ad7dc2379
 vendor/bin/hw/vendor.qti.hardware.capabilityconfigstore@1.0-service
 vendor/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
-vendor/lib/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
 
 # Display
 vendor/bin/hw/vendor.oneplus.hardware.display@1.0-service
@@ -244,12 +228,6 @@ system_ext/etc/permissions/com.qti.dpmframework.xml|c4b7ad0879d00c1eba4f3fe3a88d
 system_ext/etc/permissions/dpmapi.xml|9158c9789cc7135a685b3fb27f8cc27108b51fef
 system_ext/framework/com.qti.dpmframework.jar|96a29e28b3abffb9223daadd67459e3f5a3271df
 system_ext/framework/dpmapi.jar|2e2fbe2257a697b96a644c774136da0554430d3f
-system_ext/lib/com.qualcomm.qti.dpm.api@1.0.so|133f0bb54be39eefa757eb95d6935779e32d8cce
-system_ext/lib/libdpmctmgr.so|2cab569ad7266dc9c831db413c759d3928eaa4c6
-system_ext/lib/libdpmfdmgr.so|8f84d3cb8d7bd2c80902103356e927907bfbaf14
-system_ext/lib/libdpmframework.so|b46110556feb00bb50baa35a78bc0c698616eb96
-system_ext/lib/libdpmtcm.so|c949e6e5d1524f8e21e99c51a95c6f0e7a0d54c5
-system_ext/lib/vendor.qti.diaghal@1.0.so|7289c0165df0140036cb0a6794fc27d039b85ab5
 system_ext/lib64/com.qualcomm.qti.dpm.api@1.0.so|f2d02195cca305fad78402c65d090bad72955262
 system_ext/lib64/libdpmctmgr.so|305ff03241dd426af93ad460e616ca4f284c29bd
 system_ext/lib64/libdpmfdmgr.so|232bb4c0f9bf5603e9a1d917dfc6f9e447eb7b4b
@@ -660,12 +638,6 @@ vendor/etc/perf/perfconfigstore.xml|cb7dc88156dca524812238165eed2365eabf5b3e
 vendor/etc/perf/targetconfig.xml|e257a9782c8548d371c79bf224bcecdd8074eb9e
 vendor/etc/perf/targetresourceconfigs.xml|99f27cd5a5003da33c07cfafc7b3b9e10a062459
 vendor/etc/powerhint.xml|026d5a9414ce5e34ef257306ca8fdea682f126b4
-vendor/lib/libperfconfig.so|03b0ad5a9ffd33c9f81869d01b9e4c32c9852c49
-vendor/lib/libperfgluelayer.so|f4b58d4cf1fc2f6ae1fd4e8b0c72d71301cd5895
-vendor/lib/libperfioctl.so|39e347388dfc6d7c48f32db58d56e1c8b54b20e1
-vendor/lib/libqti-perfd-client.so|ab656bdee4eabe2db8769b3b029aaf9df4ff940b
-vendor/lib/libqti-perfd.so|deda107b11702c64062f99632daf177b7252194d
-vendor/lib/libqti-util.so|0fc209bb65b08ea39177fa9dd61db9a9bfe6c754
 vendor/lib64/liblearningmodule.so|aafb70ad1a72a8ff29107a94509e310158882c2d
 vendor/lib64/libmeters.so|d24345cd3dd3b1333f3dabfa412dd1c6e78a4246
 vendor/lib64/libperfconfig.so|006edb52a260a4d2636d1eeab8c80c18640d0b31
@@ -677,7 +649,6 @@ vendor/lib64/libqti-util.so|8cae37bd509fa29d33ea0fb2a9824c411c4392b0
 
 # Power-off alarm - from LA.UM.9.12.r1-10800-SMxx50.0
 -product/app/PowerOffAlarm/PowerOffAlarm.apk|bc906abd03e4a243201dde626b6580fd8a4f73ce
-system_ext/framework/vendor.qti.hardware.alarm-V1.0-java.jar|6508f5708221399eb8bd9754dc49bad32a911e27
 vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service|c3d1e677118b6ca1684b8a529ee07cc3d91276fa
 vendor/bin/power_off_alarm|e36ed077d45f0cb9368575c7a7e79f0292d51eaa
 vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc|a03a9a1c818595b19272ea6ffb466e23a7fc3b05
@@ -863,14 +834,7 @@ vendor/lib64/sensors.ssc.so
 vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so
 
 # Snapdragon Computer Vision Engine - from LA.UM.9.12.r1-10800-SMxx50.0
-vendor/lib/libfastcvdsp_stub.so|6ccfd797a035075db44aaf288a87d1eb041288b7
 -vendor/lib/libfastcvopt.so|69d9404ae1e1de6ee72e24ce548b196b04f87da8
-vendor/lib/libscveCommon.so|7197212884b6e49f243ad3f50b94f76a6812020d
-vendor/lib/libscveCommon_stub.so|8e9857589753a7a0402cdedc36e1275d396b394f
-vendor/lib/libscveObjectSegmentation.so|c5c151f6c0006ffa1115c2d94cfbb4f66a6f3184
-vendor/lib/libscveObjectSegmentation_stub.so|d6c091d7076be16127912458f2eacf1f30a14653
-vendor/lib/libscveObjectTracker.so|8efe841c23d9b1565c4c2799ae408a2f6778eb72
-vendor/lib/libscveObjectTracker_stub.so|94f5f8e76146d6d1ddba875f4b2657bc981c7eb8
 vendor/lib64/libfastcvdsp_stub.so|d267ea12eb2f38c58a4a009741d21b2bcccac5fa
 -vendor/lib64/libfastcvopt.so|d2d44ae05d652707049671c18961ba66e09ef393
 vendor/lib64/libscveCommon.so|d8c190c20a676883b84ba0cafb5ebf0aa2502e9d
@@ -966,25 +930,6 @@ vendor/firmware/agingtest_174hz_RTP.bin
 vendor/firmware/agingtest_176hz_RTP.bin
 vendor/firmware/agingtest_178hz_RTP.bin
 vendor/firmware/agingtest_180hz_RTP.bin
-vendor/firmware/alarm_Alarm_clock_RTP.bin
-vendor/firmware/alarm_Beep_RTP.bin
-vendor/firmware/alarm_Breeze_RTP.bin
-vendor/firmware/alarm_Dawn_RTP.bin
-vendor/firmware/alarm_Dream_RTP.bin
-vendor/firmware/alarm_Fluttering_RTP.bin
-vendor/firmware/alarm_Flyer_RTP.bin
-vendor/firmware/alarm_Interesting_RTP.bin
-vendor/firmware/alarm_Leisurely_RTP.bin
-vendor/firmware/alarm_Memory_RTP.bin
-vendor/firmware/alarm_Relieved_RTP.bin
-vendor/firmware/alarm_Ripple_RTP.bin
-vendor/firmware/alarm_Slowly_RTP.bin
-vendor/firmware/alarm_spring_RTP.bin
-vendor/firmware/alarm_Stars_RTP.bin
-vendor/firmware/alarm_Surging_RTP.bin
-vendor/firmware/alarm_tactfully_RTP.bin
-vendor/firmware/alarm_The_wind_RTP.bin
-vendor/firmware/alarm_Walking_in_the_rain_RTP.bin
 vendor/firmware/AT500ms_RTP.bin
 vendor/firmware/aw8697_haptic_166.bin
 vendor/firmware/aw8697_haptic_168.bin
@@ -997,77 +942,13 @@ vendor/firmware/aw8697_rtp_lighthouse.bin
 vendor/firmware/aw8697_rtp_silk.bin
 vendor/firmware/awinic_haptic_gun_params.bin
 vendor/firmware/awinic_haptic_params.bin
-vendor/firmware/notif_Allay_RTP.bin
-vendor/firmware/notif_Allusion_RTP.bin
-vendor/firmware/notif_Amiable_RTP.bin
-vendor/firmware/notif_Blare_RTP.bin
-vendor/firmware/notif_Blissful_RTP.bin
-vendor/firmware/notif_Brisk_RTP.bin
-vendor/firmware/notif_Bubble_RTP.bin
-vendor/firmware/notif_Cheerful_RTP.bin
-vendor/firmware/notif_Clear_RTP.bin
-vendor/firmware/notif_Comely_RTP.bin
-vendor/firmware/notif_Cozy_RTP.bin
-vendor/firmware/notif_Ding_RTP.bin
-vendor/firmware/notif_Effervesce_RTP.bin
-vendor/firmware/notif_Elegant_RTP.bin
-vendor/firmware/notif_Free_RTP.bin
-vendor/firmware/notif_Hallucination_RTP.bin
-vendor/firmware/notif_Inbound_RTP.bin
-vendor/firmware/notif_Light_RTP.bin
-vendor/firmware/notif_Meet_RTP.bin
-vendor/firmware/notif_Naivety_RTP.bin
-vendor/firmware/notif_Quickly_RTP.bin
-vendor/firmware/notif_Rhythm_RTP.bin
-vendor/firmware/notif_Surprise_RTP.bin
-vendor/firmware/notif_Twinkle_RTP.bin
-vendor/firmware/ring_Amenity_RTP.bin
-vendor/firmware/ring_Bounce_RTP.bin
-vendor/firmware/ring_Calm_RTP.bin
-vendor/firmware/ring_Lazy_RTP.bin
-vendor/firmware/ring_Mystical_RTP.bin
-vendor/firmware/ringtone_Alacrity_RTP.bin
-vendor/firmware/ringtone_Blues_RTP.bin
-vendor/firmware/ringtone_Cloud_RTP.bin
-vendor/firmware/ringtone_Cyclotron_RTP.bin
-vendor/firmware/ringtone_Distinct_RTP.bin
-vendor/firmware/ringtone_Dynamic_RTP.bin
-vendor/firmware/ringtone_Echo_RTP.bin
-vendor/firmware/ringtone_Expect_RTP.bin
-vendor/firmware/ringtone_Fanatical_RTP.bin
-vendor/firmware/ringtone_Funky_RTP.bin
-vendor/firmware/ringtone_Guitar_RTP.bin
-vendor/firmware/ringtone_Harping_RTP.bin
-vendor/firmware/ringtone_Highlight_RTP.bin
-vendor/firmware/ringtone_Idyl_RTP.bin
-vendor/firmware/ringtone_Innocence_RTP.bin
-vendor/firmware/ringtone_Journey_RTP.bin
-vendor/firmware/ringtone_Joyous_RTP.bin
-vendor/firmware/ringtone_Marimba_RTP.bin
-vendor/firmware/ringtone_Old_telephone_RTP.bin
-vendor/firmware/ringtone_OnePlus_tune_rhythm_RTP.bin
-vendor/firmware/ringtone_Oneplus_tune_RTP.bin
-vendor/firmware/ringtone_Optimistic_RTP.bin
-vendor/firmware/ringtone_Piano_RTP.bin
-vendor/firmware/ringtone_Rhythm_RTP.bin
-vendor/firmware/ring_Whirl_RTP.bin
 vendor/firmware/shuntai24k_rtp.bin
-vendor/firmware/t-jingle_RTP.bin
-vendor/firmware/Version_Alert_RTP.bin
-vendor/firmware/VZW_Alrwave_RTP.bin
 vendor/firmware/wentai24k_rtp.bin
 
 # VPP - from LA.UM.9.12.r1-10800-SMxx50.0
 vendor/bin/vppservice|65afdb036ea297d52beaa8243413d43f629274b2
 vendor/etc/configstore/vpp.configstore.xml|ed961545186c66fd9523f25866c74f2e11ee63d7
 vendor/etc/init/vppservice.rc|24c089e0e413cbb3fa6daaf0af4215870bdf1b8e
-vendor/lib/libvppclient.so|1cb766ec54a015545449f184f366a3ea5e0ad85e
-vendor/lib/libvpphcp.so|fa29ae38a822d2048383b6bc23fc0d731a566e39
-vendor/lib/libvpphvx.so|b1ab881c0d8ae2bf4c2132d31ee27debfeb2dafe
-vendor/lib/libvpplibrary.so|dfacc188a3261d951074f8cb0c980a136d625f6c
-vendor/lib/vendor.qti.hardware.vpp@1.1.so|8df356bc93951b2072590ff17c5d7af08b4e8299
-vendor/lib/vendor.qti.hardware.vpp@1.2.so|edd5e3b33c51c31c8e9e54912269e893c4e3c730
-vendor/lib/vendor.qti.hardware.vpp@1.3.so|5daf9c261188ca05696002622509756d079177ca
 vendor/lib64/libvppclient.so|2b1a69035a5e9ef9c97e626cf9b3cd4e5028b991
 vendor/lib64/libvpphcp.so|45fa18d78a0d858cf5bca39f30f01ad882ba2cdb
 vendor/lib64/libvpphvx.so|ab2acdba4e6f23cd0b2ef2bc760ff1396fff7101
