@@ -541,38 +541,12 @@ vendor/lib64/unnhal-acc-hta.so|f9a42f0ceee49e1a11f8fcd81d59384de8e4790e
 vendor/lib64/unnhal-acc-hvx.so|902b52e54aa5a85fd4989d3526c9e430cfc095a9
 
 # NFC
-system/etc/nfcee_access.xml
--system_ext/app/NQNfcNci/NQNfcNci.apk
-system_ext/etc/permissions/com.nxp.nfc.nq.xml
-system_ext/framework/com.nxp.nfc.nq.jar
-system_ext/lib64/libnqnfc-nci.so
-system_ext/lib64/libnqnfc_nci_jni.so
-vendor/bin/hw/vendor.nxp.hardware.nfc@2.0-service
-vendor/etc/init/vendor.nxp.hardware.nfc@2.0-service.rc
-vendor/etc/permissions/com.nxp.mifare.xml
-vendor/etc/libese-nxp.conf
 vendor/etc/libnfc-mtp-SN100.conf
-vendor/etc/libnfc-mtp-SN100.conf_19805
-vendor/etc/libnfc-mtp-SN100.conf_19811
-vendor/etc/libnfc-mtp-SN100.conf_19821
-vendor/etc/libnfc-mtp-SN100.conf_19867
 vendor/etc/libnfc-mtp-SN100_38_4MHZ.conf
-vendor/etc/libnfc-nci.conf
-vendor/etc/libnfc-nxp-pnscr.conf
-vendor/etc/libnfc-qrd-SN100.conf
-vendor/etc/libnfc-qrd-SN100_38_4MHZ.conf
-vendor/etc/libnfc_beijing_config.conf
-vendor/etc/libnfc_gcf_config.conf
-vendor/etc/libnfc_shanghai_config.conf
-vendor/etc/libnfc_suzhou_config.conf
-vendor/etc/libnfc_xiamen_config.conf
-vendor/etc/nfc_config_type.conf
-vendor/etc/sn100u_nfcon.pnscr
 vendor/lib/libsn100u_fw.so
-vendor/lib64/libchrome.so
-vendor/lib64/nfc_nci.nqx.default.hw.so
-vendor/lib64/se_nq_extn_client.so
-vendor/lib64/vendor.nxp.hardware.nfc@2.0.so
+
+# NFC_NQ - from LA.UM.9.12.r1-10800-SMxx50.0 
+vendor/bin/nqnfcinfo|22d7a3feef0f51f3d5fceb197264d44e07c9e736
 
 # OMX - from LA.UM.9.12.r1-10800-SMxx50.0 
 vendor/lib/libAlacSwDec.so|e49062c9fd9377e8264bf8f7901394653b9f02dc
