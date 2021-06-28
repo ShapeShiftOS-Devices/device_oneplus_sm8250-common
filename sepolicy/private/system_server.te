@@ -2,4 +2,4 @@ allow system_server app_zygote:process getpgid;
 
 dontaudit system_server default_android_hwservice:hwservice_manager find;
 dontaudit system_server sysfs:file read;
-allow system_server camera_data_file:file r_file_perms;
+allow system_server ssos_data_file:file r_file_perms;

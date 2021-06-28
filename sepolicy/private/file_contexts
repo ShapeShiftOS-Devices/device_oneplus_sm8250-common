@@ -1,2 +1,2 @@
 # Data files
-/data/misc/camera/client_package_name                u:object_r:camera_data_file:s0
+/data/misc/camera/client_package_name                u:object_r:ssos_data_file:s0
