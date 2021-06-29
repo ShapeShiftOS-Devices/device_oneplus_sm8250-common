@@ -42,12 +42,6 @@ public class KeyHandler implements DeviceKeyHandler {
     private static final int MODE_VIBRATION = 602;
     private static final int MODE_SILENCE = 603;
 
-    // Vibration effects
-    private static final VibrationEffect MODE_NORMAL_EFFECT =
-            VibrationEffect.get(VibrationEffect.EFFECT_HEAVY_CLICK);
-    private static final VibrationEffect MODE_VIBRATION_EFFECT =
-            VibrationEffect.get(VibrationEffect.EFFECT_DOUBLE_CLICK);
-
     public static final String CLIENT_PACKAGE_NAME = "com.oneplus.camera";
     public static final String CLIENT_PACKAGE_PATH = "/data/misc/camera/client_package_name";
 
@@ -90,20 +84,14 @@ public class KeyHandler implements DeviceKeyHandler {
     }
 
     public KeyEvent handleKeyEvent(KeyEvent event) {
-        if (event.getAction() != KeyEvent.ACTION_DOWN) {
-            return event;
-        }
-
         int scanCode = event.getScanCode();
 
         switch (scanCode) {
             case MODE_NORMAL:
                 mAudioManager.setRingerModeInternal(AudioManager.RINGER_MODE_NORMAL);
-                doHapticFeedback(MODE_NORMAL_EFFECT);
                 break;
             case MODE_VIBRATION:
                 mAudioManager.setRingerModeInternal(AudioManager.RINGER_MODE_VIBRATE);
-                doHapticFeedback(MODE_VIBRATION_EFFECT);
                 break;
             case MODE_SILENCE:
                 mAudioManager.setRingerModeInternal(AudioManager.RINGER_MODE_SILENT);
@@ -111,13 +99,15 @@ public class KeyHandler implements DeviceKeyHandler {
             default:
                 return event;
         }
+        doHapticFeedback();
 
         return null;
     }
 
-    private void doHapticFeedback(VibrationEffect effect) {
+    private void doHapticFeedback() {
         if (mVibrator != null && mVibrator.hasVibrator()) {
-            mVibrator.vibrate(effect);
+            mVibrator.vibrate(VibrationEffect.createOneShot(50,
+                    VibrationEffect.DEFAULT_AMPLITUDE));
         }
     }
 
