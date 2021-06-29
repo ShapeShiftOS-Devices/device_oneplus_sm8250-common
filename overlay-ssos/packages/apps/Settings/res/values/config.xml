@@ -39,5 +39,8 @@
     <!-- Device specific doze package -->
     <string name="config_customDozePackage" translatable="false">org.lineageos.settings.doze/org.lineageos.settings.doze.DozeSettingsActivity</string>
 
+    <!-- TouchGestures -->
+    <bool name="config_hasLineageTouchGestures">true</bool>
+
 </resources>
 
