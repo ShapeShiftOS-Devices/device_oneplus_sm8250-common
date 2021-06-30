@@ -37,18 +37,18 @@
         <!-- Additional button settings (Button settings) -->
         <activity
             android:name=".ButtonSettingsActivity"
-            android:label="@string/button_panel_title">
+            android:label="@string/buttons_dashboard_summary">
             <intent-filter>
-                <action android:name="com.android.settings.action.EXTRA_SETTINGS" />
+                <action android:name="com.android.settings.action.IA_SETTINGS" />
             </intent-filter>
             <meta-data
-                android:name="com.android.settings.icon"
-                android:resource="@drawable/ic_settings_additional_buttons" />
+                android:name="com.android.settings.order"
+                android:value="-109" />
             <meta-data
                 android:name="com.android.settings.category"
-                android:value="com.android.settings.category.ia.homepage" />
+                android:value="com.android.settings.category.ia.sound" />
             <meta-data android:name="com.android.settings.summary"
-                android:resource="@string/buttons_dashboard_summary" />
+                android:resource="@string/buttons_alert_summary" />
         </activity>
 
         <activity android:name=".KeyHandler" />
