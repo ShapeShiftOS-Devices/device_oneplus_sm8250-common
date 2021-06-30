@@ -25,6 +25,23 @@
         android:persistent="false" />
 
     <PreferenceCategory
+        android:title="@string/screen_off_settings_title">
+
+        <Preference
+            android:key="touchscreen_gesture_settings"
+            android:persistent="false"
+            android:icon="@drawable/ic_gestures_icon"
+            android:title="@string/touchscreen_gesture_settings_title"
+            android:summary="@string/touchscreen_gesture_settings_summary">
+            <intent
+                    android:action="android.intent.action.MAIN"
+                    android:targetPackage="com.android.touch.gestures"
+                    android:targetClass="com.android.touch.gestures.TouchscreenGestureSettings" />
+        </Preference>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:key="pickup_sensor"
         android:title="@string/pickup_sensor_title">
 
